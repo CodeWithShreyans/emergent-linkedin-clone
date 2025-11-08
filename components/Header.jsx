@@ -61,7 +61,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-14">
             {/* Logo and Search */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 flex-1">
               <Link href="/" className="flex items-center">
                 <div className="w-9 h-9 bg-[#0A66C2] rounded flex items-center justify-center text-white font-bold text-lg">
                   in
@@ -78,7 +78,7 @@ export default function Header() {
             </div>
 
             {/* Modify With AI Button - Center */}
-            <div className="absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-center justify-center flex-1">
               <Button
                 onClick={() => setIsModalOpen(true)}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-full px-4 py-2 flex items-center space-x-2 shadow-lg"
@@ -89,7 +89,7 @@ export default function Header() {
             </div>
 
             {/* Navigation */}
-            <nav className="flex items-center space-x-1">
+            <nav className="flex items-center space-x-1 flex-1 justify-end">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 const Icon = item.icon;
