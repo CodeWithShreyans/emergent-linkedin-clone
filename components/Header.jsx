@@ -16,8 +16,8 @@ export default function Header() {
 
   const navItems = [
     { href: '/', icon: Home, label: 'Home' },
-    { href: '/network', icon: Users, label: 'My Network' },
     { href: '/messages', icon: MessageSquare, label: 'Messaging' },
+    { href: '/network', icon: Users, label: 'My Network' },
     { href: '/profile', icon: User, label: 'Me' },
   ];
 
