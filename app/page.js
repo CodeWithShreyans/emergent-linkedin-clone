@@ -10,12 +10,12 @@ export default function Home() {
     <div className="max-w-7xl mx-auto px-4 py-6">
       <div className="grid grid-cols-12 gap-6">
         {/* Left Sidebar */}
-        <div className="col-span-12 lg:col-span-3">
+        <div className="col-span-12 lg:col-span-4">
           <ProfileCard />
         </div>
 
         {/* Main Feed */}
-        <div className="col-span-12 lg:col-span-6">
+        <div className="col-span-12 lg:col-span-5">
           <CreatePost />
           <div className="space-y-2">
             {posts.map((post) => (
