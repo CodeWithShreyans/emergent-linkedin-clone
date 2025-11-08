@@ -31,6 +31,7 @@ export default function Header() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          "x-api-key": process.env.BACKEND_API_KEY
         },
         body: JSON.stringify({
           userId: 'abc',
