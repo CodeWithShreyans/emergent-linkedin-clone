@@ -1,15 +1,19 @@
 import './globals.css'
+import Header from '@/components/Header'
 
 export const metadata = {
-  title: 'Next.js MongoDB Template',
-  description: 'A simple template with App Router, MongoDB, and shadcn/ui',
+  title: 'LinkedIn Clone',
+  description: 'Professional networking platform',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className="bg-[#F3F2EF]">
+        <Header />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )
