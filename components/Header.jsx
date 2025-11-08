@@ -27,27 +27,24 @@ export default function Header() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch('https://modifywithai.com/api/modify', {
+      const response = await fetch('/api/modify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          "x-api-key": process.env.BACKEND_API_KEY
         },
         body: JSON.stringify({
-          userId: 'abc',
-          prompt: prompt,
-          githubUsername: 'CodeWithShreyans',
-          githubRepo: 'emergent-linkedin-clone',
-          githubInstallationId: '93751008'
+          prompt: prompt
         })
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        console.log('Modification request sent successfully');
+        console.log('Modification request sent successfully', data);
         setPrompt('');
         setIsModalOpen(false);
       } else {
-        console.error('Failed to send modification request');
+        console.error('Failed to send modification request:', data.error);
       }
     } catch (error) {
       console.error('Error sending modification request:', error);
