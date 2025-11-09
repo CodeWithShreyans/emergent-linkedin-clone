@@ -17,13 +17,15 @@ export async function POST(request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'x-api-key': process.env.BACKEND_API_KEY
       },
       body: JSON.stringify({
         userId: 'abc',
         prompt: prompt,
         githubUsername: 'CodeWithShreyans',
         githubRepo: 'emergent-linkedin-clone',
-        githubInstallationId: '93751008'
+        githubInstallationId: '93751008',
+        commitToMain: true
       })
     });
 
