@@ -34,14 +34,6 @@ export default function ProfileCard() {
           Grow your network
         </Link>
       </div>
-      
-      <div className="border-t border-gray-200 px-4 py-3 hover:bg-gray-50 cursor-pointer">
-        <p className="text-xs text-gray-600">Access exclusive tools & insights</p>
-        <div className="flex items-center mt-1">
-          <div className="w-3 h-3 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-sm mr-1"></div>
-          <span className="text-xs font-semibold">Try Premium for free</span>
-        </div>
-      </div>
     </div>
   );
 }
